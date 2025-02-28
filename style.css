@@ -39,8 +39,11 @@ body {
   background-color: rgba(0, 0, 0, 1);
   padding: 10px;
   border-radius: 5px;
-  width: 80%;
+  width: 80%; /* Adjust this value to control the width of the title boxes */
   margin-top: 20px;
+  text-overflow: ellipsis; /* Add ellipsis for overflowing text */
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide any overflowing text */
 }
 
 .page p {
