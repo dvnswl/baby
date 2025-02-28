@@ -5,7 +5,6 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-color: #333;
   background-image: url("page1.png"); 
   overflow: hidden;
   perspective: 1000px; /* Add perspective for 3D effect */
