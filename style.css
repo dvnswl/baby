@@ -7,11 +7,12 @@ body {
   margin: 0;
   background-color: #333;
   overflow: hidden;
+  perspective: 1000px; /* Add perspective for 3D effect */
 }
 
 .book {
-  width: 100vw;
-  height: 100vh;
+  width: 80vw;
+  height: 80vh;
   position: relative;
   overflow: hidden;
 }
@@ -27,17 +28,11 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  transition: transform 0.8s ease-in-out;
-  transform-origin: left center;
-  transform: translateX(100%);
   color: white;
   text-align: center;
   padding: 20px;
   box-sizing: border-box;
-}
-
-.page:first-child {
-  transform: translateX(0);
+  transform-origin: left center; /* Set transform origin for page flip */
 }
 
 .page h2 {
@@ -54,4 +49,21 @@ body {
   border-radius: 5px;
   width: 80%;
   margin-bottom: 20px;
+}
+
+/* Page flip animation */
+.page.flip {
+  animation: flipPage 0.8s forwards; /* Apply flip animation */
+}
+
+@keyframes flipPage {
+  0% {
+    transform: rotateY(0deg);
+  }
+  50% {
+    transform: rotateY(-90deg); /* Flip halfway */
+  }
+  100% {
+    transform: translateX(-100%) rotateY(-180deg); /* Move to the left and complete flip */
+  }
 }
