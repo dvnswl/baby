@@ -8,9 +8,9 @@ body {
   overflow: hidden;
   perspective: 1000px; /* Add perspective for 3D effect */
   background-image: 
-    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), /* White overlay */
-    url("page1.png"); /* Use page1.png as the background image */
-  background-size: cover; /* Ensure the background covers the entire viewport */
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)),
+    url("page1.png");
+  background-size: 100% 100%; /* Stretch the image to cover the viewport */
   background-repeat: no-repeat;
   background-position: center;
 }
