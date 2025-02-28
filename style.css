@@ -5,9 +5,14 @@ body {
   align-items: center;
   min-height: 100vh;
   margin: 0;
-  background-image: url("page1.png"); 
   overflow: hidden;
   perspective: 1000px; /* Add perspective for 3D effect */
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.5)), /* White overlay */
+    url("page1.png"); /* Use page1.png as the background image */
+  background-size: cover; /* Ensure the background covers the entire viewport */
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .book {
